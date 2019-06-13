@@ -9,7 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.facebook.login.widget.LoginButton;
 import com.firebase.ui.auth.IdpResponse;
@@ -48,6 +50,7 @@ public class GoogleSignInActivity extends AppCompatActivity implements
     private GoogleSignInClient mGoogleSignInClient;
     private TextView mStatusTextView;
     private TextView mDetailTextView;
+    ProgressBar progressBar;
 
 
     @Override
@@ -98,18 +101,24 @@ public class GoogleSignInActivity extends AppCompatActivity implements
 
         if (requestCode ==GOOGLE_SIGN)
         {
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            try{
-                GoogleSignInAccount account = task.getResult(ApiException.class);
-                Intent i = new Intent(GoogleSignInActivity.this, AcceuilActivity.class);
-                startActivity(i);
+            Task<GoogleSignInAccount> task =GoogleSignIn.getSignedInAccountFromIntent(data);
 
-                if(account!=null)
+            try {
+
+                GoogleSignInAccount account = task.getResult(ApiException.class);
+
+                if(account ==null)
+                {
                     firebaseAuthWithGoogle(account);
-            }catch (ApiException e)
-            {
+
+                }
+
+            }catch (ApiException e){
+
                 e.printStackTrace();
+
             }
+
         }
     }
 
@@ -119,7 +128,7 @@ public class GoogleSignInActivity extends AppCompatActivity implements
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
         // [START_EXCLUDE silent]
-        showProgressDialog();
+
         // [END_EXCLUDE]
 
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
@@ -128,25 +137,23 @@ public class GoogleSignInActivity extends AppCompatActivity implements
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+                            progressBar.setVisibility(View.INVISIBLE);
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "Authentification avec google:reussi");
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
                         } else {
+                            progressBar.setVisibility(View.INVISIBLE);
                             // If sign in fails, display a message to the user.
-                            Log.w(TAG, "echec d'authenficiation avec google:echec", task.getException());
+                            Log.w(TAG, "echec d'authenficiation avec google:echec de connexion", task.getException());
                             Snackbar.make(findViewById(R.id.main_layout), "Authentification échoué.", Snackbar.LENGTH_SHORT).show();
                             updateUI(null);
                         }
 
-                        // [START_EXCLUDE]
-                        hideProgressDialog();
-                        // [END_EXCLUDE]
+
                     }
                 });
-    }
-
-    private void showProgressDialog() {
     }
     // [END auth_with_google]
 
@@ -186,7 +193,7 @@ public class GoogleSignInActivity extends AppCompatActivity implements
     }
 
     private void updateUI(FirebaseUser user) {
-        hideProgressDialog();
+
         if (user != null) {
             mStatusTextView.setText(getString(R.string.google_status_fmt, user.getEmail()));
             mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
@@ -202,8 +209,7 @@ public class GoogleSignInActivity extends AppCompatActivity implements
         }
     }
 
-    private void hideProgressDialog() {
-    }
+
 
     @Override
     public void onClick(View v) {

@@ -218,39 +218,14 @@ public class SignupActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(callbackManager!=null)//verification de la connexion
-        callbackManager.onActivityResult(requestCode,resultCode,data);
 
-        super.onActivityResult(requestCode, resultCode, data);
+            callbackManager.onActivityResult(requestCode, resultCode, data);
 
-        Intent i = new Intent(SignupActivity.this, AcceuilActivity.class);
-        startActivity(i);
+            super.onActivityResult(requestCode, resultCode, data);
 
+            Intent i = new Intent(SignupActivity.this, AcceuilActivity.class);
+            startActivity(i);
 
-
-    }
-
-    private void firebaseAuthWithGoogle(GoogleSignInAccount account) {
-
-        Log.d("TAG", "firebaseAuthWithGoogle : "+account.getId());
-
-        AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(),null);
-        auth.signInWithCredential(credential)
-                .addOnCompleteListener(this, task->{
-                    if (task.isSuccessful()){
-                        progressBar.setVisibility(View.VISIBLE);
-                        Log.d("TAG","Connecté avec succes");
-
-                        FirebaseUser mUser = auth.getCurrentUser();
-                        UpdatedUi(mUser);
-
-                    }else
-                        {
-                            progressBar.setVisibility(View.VISIBLE);
-                            Log.w("TAG","echec de connexion");
-                            Toast.makeText(this,"connexion echoué",Toast.LENGTH_SHORT).show();
-                          UpdatedUi(null);
-                        }
-                } );
     }
 
 
@@ -265,7 +240,7 @@ public class SignupActivity extends AppCompatActivity {
                         if(task.isSuccessful())
                         {
                             FirebaseUser myuserobj = auth.getCurrentUser();
-                            UpdatedUi(myuserobj);
+                            UpdateUi(myuserobj);
                         }
                         else
                         {
@@ -279,7 +254,7 @@ public class SignupActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "connexion impossible", Toast.LENGTH_SHORT).show();
     }
 
-    private void UpdatedUi(FirebaseUser mUser) {
+/*    private void UpdatedUi(FirebaseUser mUser) {
 
         if (mUser !=null){
             Intent i = new Intent(SignupActivity.this, AcceuilActivity.class);
@@ -287,10 +262,12 @@ public class SignupActivity extends AppCompatActivity {
         }else{
         Toast.makeText(getApplicationContext(), "connexion impossible", Toast.LENGTH_SHORT).show();
         }
-    }
+    }*/
 
 
 
+   /*
+    Methode de connexion specifique à facebook
     public void signOut() {
         // [START auth_fui_signout]
         AuthUI.getInstance()
@@ -301,9 +278,9 @@ public class SignupActivity extends AppCompatActivity {
                     }
                 });
         // [END auth_fui_signout]
-    }
+    }*/
 
-    public void delete() {
+/*    public void delete() {
         // [START auth_fui_delete]
         AuthUI.getInstance()
                 .delete(this)
@@ -314,9 +291,9 @@ public class SignupActivity extends AppCompatActivity {
                     }
                 });
         // [END auth_fui_delete]
-    }
+    }*/
 
-
+/*
     void SignInGoogle()
     {
         progressBar.setVisibility(View.VISIBLE);
@@ -324,7 +301,7 @@ public class SignupActivity extends AppCompatActivity {
         startActivityForResult(SignIntent,GOOGLE_SIGN);
     }
 
-
+*/
 
 
     @Override
