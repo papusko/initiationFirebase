@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:whatever="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/cardview_shadow_end_color"
+    tools:context=".CommandeFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:elevation="3dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@mipmap/ch" />
+
+        <TextView
+            android:id="@+id/activity_main_greeting_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:textAlignment="center"
+            android:textSize="22dp"
+            android:textColor="#000000"
+            android:text="Chemise"/>
+
+
+
+
+        <TextView
+            android:id="@+id/label_che_repassage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:text="REPASSAGE (2 TND)"/>
+
+        <EditText
+            android:id="@+id/chemise_prix_repassage"
+            style="@android:style/Widget.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="#A5B6B1"
+            android:hint="0"
+            android:imeActionLabel="Repassage"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/label_che_nettoyage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:text="+ NETTOYAGE (3,5 TND)"/>
+        <EditText
+            android:id="@+id/chemise_prix_nettoyage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#A5B6B1"
+            android:hint="0 "
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="22dp"
+            android:layout_marginRight="20dp"
+            />
+
+
+        <TextView
+            android:id="@+id/label_che_teinture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:text="TEINTURE (12 TND)"/>
+        <EditText
+            android:id="@+id/chemise_prix_teinture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#A5B6B1"
+            android:hint="0 "
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="22dp"
+            android:layout_marginRight="20dp"
+            />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#FF909090" />
+
+
+
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_pant"
+            android:layout_gravity="center"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+
+            <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ptalon" />
+
+
+        <TextView
+            android:id="@+id/pantalon_tof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_margin="20dp"
+            android:textAlignment="center"
+            android:textSize="22dp"
+            android:textColor="#000000"
+            android:text="Pantalon"/>
+
+
+
+
+        <TextView
+            android:id="@+id/label_tof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:text="REPASSAGE (2 TND)"/>
+        <EditText
+            android:id="@+id/pantalon_prix_repassage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#A5B6B1"
+            style="@android:style/Widget.EditText"
+            android:hint="0 "
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="22dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:id="@+id/label_tee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:text="+ NETTOYAGE (3,5 TND)"/>
+        <EditText
+            android:id="@+id/pantalon_prix_nettoyage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#A5B6B1"
+            android:hint="0"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="22dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:id="@+id/label_teet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:text="TEINTURE (12 TND)"/>
+        <EditText
+            android:id="@+id/pantalon_prix_teinture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#A5B6B1"
+            android:hint="0 "
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="22dp"
+            android:layout_marginRight="20dp"
+            />
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_tee"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/teed" />
+
+
+        <TextView
+            android:id="@+id/tee_short"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:layout_margin="20dp"
+            android:textAlignment="center"
+            android:textSize="22dp"
+            android:textColor="#000000"
+            android:text="Tee-Shirt"/>
+
+
+        <TextView
+            android:id="@+id/label_tee_repassage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:text="REPASSAGE (2 TND)"/>
+        <EditText
+            android:id="@+id/tee_prix_repassage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#A5B6B1"
+            style="@android:style/Widget.EditText"
+            android:hint="0 "
+            android:padding="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="22dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:id="@+id/label_tee_nettoyage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:text="+ NETTOYAGE (3,5 TND)"/>
+        <EditText
+            android:id="@+id/tee_prix_nettoyage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#A5B6B1"
+            android:hint="0"
+            android:layout_marginBottom="10dp"
+            android:padding="8dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="22dp"
+            android:layout_marginRight="20dp"
+            />
+
+
+        <TextView
+            android:id="@+id/label_teint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:text="TEINTURE (12 TND)"/>
+        <EditText
+            android:id="@+id/tee_prix_teinture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#A5B6B1"
+            android:hint="0 "
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="22dp"
+            android:layout_marginRight="20dp"
+            />
+
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#FF909090" />
+
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_pull"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/pull" />
+
+
+                <TextView
+                    android:id="@+id/pull_short"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:layout_margin="20dp"
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:textColor="#000000"
+                    android:text="Pull Gilet"/>
+
+
+                <TextView
+                    android:id="@+id/label_pull_repassage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="REPASSAGE (2 TND)"/>
+                <EditText
+                    android:id="@+id/pull_prix_repassage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A5B6B1"
+                    style="@android:style/Widget.EditText"
+                    android:hint="0 "
+                    android:padding="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/label_pull_nettoyage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="+ NETTOYAGE (3,5 TND)"/>
+                <EditText
+                    android:id="@+id/pull_prix_nettoyage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A5B6B1"
+                    android:hint="0"
+                    android:layout_marginBottom="10dp"
+                    android:padding="8dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/pull_teint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="TEINTURE (12 TND)"/>
+                <EditText
+                    android:id="@+id/pull_prix_teinture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A5B6B1"
+                    android:hint="0 "
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#FF909090" />
+
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_veste"
+            android:elevation="3dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@mipmap/veste" />
+
+                <TextView
+                    android:id="@+id/activity_pull_greeting_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:textColor="#000000"
+                    android:text="Veste"/>
+
+
+
+
+                <TextView
+                    android:id="@+id/label_veste_repassage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="REPASSAGE (2 TND)"/>
+
+                <EditText
+                    android:id="@+id/veste_prix_repassage"
+                    style="@android:style/Widget.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#A5B6B1"
+                    android:hint="0"
+                    android:imeActionLabel="Repassage"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:id="@+id/label_veste_nettoyage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="+ NETTOYAGE (3,5 TND)"/>
+                <EditText
+                    android:id="@+id/veste_prix_nettoyage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A5B6B1"
+                    android:hint="0 "
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/label_veste_teinture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="TEINTURE (12 TND)"/>
+                <EditText
+                    android:id="@+id/veste_prix_teinture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A5B6B1"
+                    android:hint="0 "
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#FF909090" />
+
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_costume"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/cost" />
+
+
+                <TextView
+                    android:id="@+id/costume_tof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_margin="20dp"
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:textColor="#000000"
+                    android:text="Costume"/>
+
+
+
+
+                <TextView
+                    android:id="@+id/costumes_tof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="REPASSAGE (2 TND)"/>
+                <EditText
+                    android:id="@+id/costume_prix_repassage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A5B6B1"
+                    style="@android:style/Widget.EditText"
+                    android:hint="0 "
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/labele_costume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="+ NETTOYAGE (3,5 TND)"/>
+                <EditText
+                    android:id="@+id/costume_prix_nettoyage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A5B6B1"
+                    android:hint="0"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/label_costume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="TEINTURE (12 TND)"/>
+                <EditText
+                    android:id="@+id/costume_prix_teinture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A5B6B1"
+                    android:hint="0 "
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#FF909090" />
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_jupe"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/ju" />
+
+
+                <TextView
+                    android:id="@+id/jupe_short"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:layout_margin="20dp"
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:textColor="#000000"
+                    android:text="Jupe"/>
+
+
+                <TextView
+                    android:id="@+id/label_jupe_repassage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="REPASSAGE (2 TND)"/>
+                <EditText
+                    android:id="@+id/jupe_prix_repassage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A5B6B1"
+                    style="@android:style/Widget.EditText"
+                    android:hint="0 "
+                    android:padding="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/jupe_tee_nettoyage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="+ NETTOYAGE (3,5 TND)"/>
+                <EditText
+                    android:id="@+id/jupe_prix_nettoyage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A5B6B1"
+                    android:hint="0"
+                    android:layout_marginBottom="10dp"
+                    android:padding="8dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/label_teintu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="TEINTURE (12 TND)"/>
+                <EditText
+                    android:id="@+id/jupe_prix_teinture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A5B6B1"
+                    android:hint="0 "
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#FF909090" />
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_robes"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/rob" />
+
+
+                <TextView
+                    android:id="@+id/robe_short"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:layout_margin="20dp"
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:textColor="#000000"
+                    android:text="Robes"/>
+
+
+                <TextView
+                    android:id="@+id/label_robe_repassage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="REPASSAGE (2 TND)"/>
+                <EditText
+                    android:id="@+id/robe_prix_repassage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A5B6B1"
+                    style="@android:style/Widget.EditText"
+                    android:hint="0 "
+                    android:padding="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/label_robe_nettoyage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="+ NETTOYAGE (3,5 TND)"/>
+                <EditText
+                    android:id="@+id/robe_prix_nettoyage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A5B6B1"
+                    android:hint="0"
+                    android:layout_marginBottom="10dp"
+                    android:padding="8dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/robe_teint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:text="TEINTURE (12 TND)"/>
+                <EditText
+                    android:id="@+id/robe_prix_teinture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A5B6B1"
+                    android:hint="0 "
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#FF909090" />
+
+        <Button
+            android:id="@+id/btn_reset_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="#C73305"
+            android:text="VALIDER MA COMMANDE"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+    </ScrollView>
+
+
+
+</FrameLayout>

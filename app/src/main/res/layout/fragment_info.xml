@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp">
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/info_perso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="22dp"
+            android:textColor="#000000"
+            android:text="Informations personnelles :"/>
+
+
+        <TextView
+            android:id="@+id/info_nom_complet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_margin="20dp"
+            android:textColor="#000000"
+            android:text="Nom *"/>
+        <EditText
+            android:id="@+id/info_prenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EDF1EF"
+            style="@android:style/Widget.EditText"
+            android:hint="Prénom "
+            android:padding="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#746E6E"
+            android:textColorHint="#5C5959"
+            android:textSize="14dp"
+            android:layout_marginRight="20dp"
+            />
+        <EditText
+            android:id="@+id/info_nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EDF1EF"
+            style="@android:style/Widget.EditText"
+            android:hint="Nom"
+            android:padding="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#5C5959"
+            android:textSize="14dp"
+            android:layout_marginRight="20dp"
+            />
+        <TextView
+            android:id="@+id/info_telephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#000000"
+            android:text="TELEPHONE *"/>
+        <EditText
+            android:id="@+id/info_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EDF1EF"
+            android:inputType="phone"
+            style="@android:style/Widget.EditText"
+            android:hint=""
+            android:padding="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#5C5959"
+            android:textSize="14dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:id="@+id/info_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#000000"
+            android:text="EMAIL *"/>
+        <EditText
+            android:id="@+id/info_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EDF1EF"
+            style="@android:style/Widget.EditText"
+            android:hint=""
+            android:padding="8dp"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#5C5959"
+            android:textSize="14dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:id="@+id/info_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_margin="12dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:text="DATE DU RDV *"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="250dp"
+                android:hint=""
+                android:textSize="14dp"
+                android:padding="8dp"
+                android:layout_marginLeft="3dp"
+                android:layout_height="wrap_content">
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/editText"
+                android:layout_toRightOf="@+id/editText"
+                android:contentDescription="@string/selectdate"
+                android:cropToPadding="true"
+                android:src="@drawable/ic_event"
+ />
+        </RelativeLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/activity_horizontal_margin"
+                android:entries="@array/horaire_arrays"
+                android:outlineSpotShadowColor="@color/colorPrimaryDark"
+                style="@style/MySpinnerLook" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/info_adresse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:text="ADRESSE *"/>
+        <EditText
+            android:id="@+id/info_adresse_ligne1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EDF1EF"
+            style="@android:style/Widget.EditText"
+            android:padding="8dp"
+            android:hint="ADRESSE LIGNE 1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#5C5959"
+            android:textSize="14dp"
+            android:layout_marginRight="20dp"
+            />
+        <EditText
+            android:id="@+id/info_adresse_ligne2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EDF1EF"
+            style="@android:style/Widget.EditText"
+            android:padding="8dp"
+            android:hint="ADRESSE LIGNE 2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#585757"
+            android:textColorHint="#5C5959"
+            android:textSize="14dp"
+            android:layout_marginRight="20dp"
+            />
+        <EditText
+            android:id="@+id/info_adresse_ville"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EDF1EF"
+            style="@android:style/Widget.EditText"
+            android:padding="8dp"
+            android:hint="VILLE"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#5C5959"
+            android:textSize="14dp"
+            android:layout_marginRight="20dp"
+            />
+        <EditText
+            android:id="@+id/info_adresse_code_postal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EDF1EF"
+            style="@android:style/Widget.EditText"
+            android:padding="8dp"
+            android:hint="CODE POSTAL / ZIP CODE"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#5C5959"
+            android:textSize="14dp"
+            android:layout_marginRight="20dp"
+            />
+
+
+
+
+        <Button
+            android:id="@+id/btn_reset_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="#C73305"
+            android:text="ENREGISTRER"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+</ScrollView>
+</FrameLayout>

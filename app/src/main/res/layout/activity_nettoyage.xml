@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NettoyageActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/tabMode"
+        android:tooltipText="Pressing App"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:transitionName="Pressing App"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+
+            <!-- TODO: Update blank fragment layout -->
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:text="Tarifs Nettoyage"
+                android:layout_marginTop="12dp"
+                android:textColor="#000000"/>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090" />
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <!-- TODO: Update blank fragment layout -->
+                <ImageView
+                    android:id="@+id/ono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="6dip"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cercle" />
+                <TextView
+                    android:id="@+id/net_cra_ps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Cravate "
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/prix_net_cra_ps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="250 Fcfa"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <!-- TODO: Update blank fragment layout -->
+                <ImageView
+                    android:id="@+id/psnet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="6dip"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cercle" />
+                <TextView
+                    android:id="@+id/net_ps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Petits souvetement"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/prix_net_ps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="250 Fcfa"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <!-- TODO: Update blank fragment layout -->
+                <ImageView
+                    android:id="@+id/tricotnet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="6dip"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cercle" />
+                <TextView
+                    android:id="@+id/net_tricot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="tricop de corp "
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/prix_net_tricot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="400 Fcfa"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <!-- TODO: Update blank fragment layout -->
+                <ImageView
+                    android:id="@+id/ionee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="6dip"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cercle" />
+                <TextView
+                    android:id="@+id/net_tee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="T - Shirt"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/prix_net_tee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="400 Fcfa"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <!-- TODO: Update blank fragment layout -->
+
+                <ImageView
+                    android:id="@+id/inere"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="6dip"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cercle" />
+
+                <TextView
+                    android:id="@+id/net_che_pull"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Chemise "
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/prix_net_che_pull"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="1250 Fcfa"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <!-- TODO: Update blank fragment layout -->
+
+                <ImageView
+                    android:id="@+id/pantalonet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="6dip"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cercle" />
+
+                <TextView
+                    android:id="@+id/net_pantalon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=" Pantalon "
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/prix_net_pantalon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="1250 Fcfa"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"/>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <!-- TODO: Update blank fragment layout -->
+
+                <ImageView
+                    android:id="@+id/nete_gilet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="6dip"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cercle" />
+
+                <TextView
+                    android:id="@+id/net_gilet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=" Gilet  "
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/prix_net_gilet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="1250 Fcfa"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <!-- TODO: Update blank fragment layout -->
+
+                <ImageView
+                    android:id="@+id/pulln"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="6dip"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cercle" />
+
+                <TextView
+                    android:id="@+id/net_pull"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=" Pull  "
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/prix__net_pull"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="1250 Fcfa"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <!-- TODO: Update blank fragment layout -->
+
+                <ImageView
+                    android:id="@+id/juped"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="6dip"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cercle" />
+
+                <TextView
+                    android:id="@+id/net_jupe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Jupe "
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/prix_net_jupe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="1250 Fcfa"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <!-- TODO: Update blank fragment layout -->
+                <ImageView
+                    android:id="@+id/icen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="6dip"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cercle" />
+                <TextView
+                    android:id="@+id/net_veste_drap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Veste - Drap 1e place "
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/prix_net_veste_drap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="2000 Fcfa"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <!-- TODO: Update blank fragment layout -->
+
+                <ImageView
+                    android:id="@+id/iconer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="6dip"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cercle" />
+                <TextView
+                    android:id="@+id/net_robe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Robe "
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/prix_net_robe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="250 Fcfa"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <!-- TODO: Update blank fragment layout -->
+                <ImageView
+                    android:id="@+id/ine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="6dip"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cercle" />
+                <TextView
+                    android:id="@+id/net_comb_blu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Combinaison -Drap 2 place "
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/prix_net_com_blu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="250 Fcfa"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <!-- TODO: Update blank fragment layout -->
+                <ImageView
+                    android:id="@+id/net"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="6dip"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cercle" />
+                <TextView
+                    android:id="@+id/net_imper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="impermeable "
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/prix_net_cra_imper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="250 Fcfa"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <!-- TODO: Update blank fragment layout -->
+
+                <ImageView
+                    android:id="@+id/inun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="6dip"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cercle" />
+                <TextView
+                    android:id="@+id/net_costume_femme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Costume - Ensemble femme "
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/prix_net_cost_femme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="250 Fcfa"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <!-- TODO: Update blank fragment layout -->
+                <ImageView
+                    android:id="@+id/ico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="6dip"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_cercle" />
+                <TextView
+                    android:id="@+id/net_couette"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Couette 1e place "
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/prix_net_couette"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="250 Fcfa"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#FF909090"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"/>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+</FrameLayout>
+

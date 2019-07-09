@@ -18,6 +18,9 @@ import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
@@ -35,7 +38,8 @@ public  class MainActivity extends AppCompatActivity implements View.OnClickList
     private static final String TAG = "MainoActivity";
     Button mInscription;
     Button mLogin;
-
+    private static final int GOOGLE_SIGN = 223;
+    GoogleSignInClient mGoogleSignInClient;
     private EditText inputEmail, inputPassword;
     FirebaseAuth auth;
     FirebaseUser user;
@@ -57,6 +61,14 @@ public  class MainActivity extends AppCompatActivity implements View.OnClickList
         {
             setContentView(R.layout.activity_main);
             FacebookSdk.sdkInitialize(getApplicationContext());
+
+            GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions
+                    .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestIdToken(getString(R.string.default_web_client_id))
+                    .requestEmail()
+                    .build();
+
+            mGoogleSignInClient = GoogleSignIn.getClient(this, googleSignInOptions);
         }
 
         inputEmail = (EditText) findViewById(R.id.email);
@@ -65,10 +77,6 @@ public  class MainActivity extends AppCompatActivity implements View.OnClickList
         btnLogin = (Button) findViewById(R.id.btn_login);
         btnSignup = (Button) findViewById(R.id.sign_up_button);
 
-
-
-        //Get Firebase auth instance
-        auth = FirebaseAuth.getInstance();
 
 
         // --------------------

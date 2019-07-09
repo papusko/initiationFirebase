@@ -74,5 +74,26 @@
 
     <string name="desc_firebase_lockup">Firebase logo and name</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="menu_settings">Settings</string>
+    <string name="pick_time">Pick time</string>
+
+    <string name="selectdate">Pick time</string>
+
+    <string name="horaire_rdv">Choisir Horaire du RDV</string>
+
+    <string-array name="horaire_arrays">
+        <item>Horaire de rendez-vous</item>
+        <item>09:00 - 11:00</item>
+        <item>11:00 - 13:00</item>
+        <item>13:00 - 15:00</item>
+        <item>15:00 - 17:00</item>
+        <item>17:00 - 19:00</item>
+        <item>19:00 - 21:00</item>
+        <item>21:00 - 23:00</item>
+    </string-array>
 
 </resources>
